@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主界面</title>
+		<style type="text/css">
+			*
+			{
+				margin: 0;
+				padding: 0;
+				
+			}
+			body
+			{
+				height: 100%;
+				overflow: hidden;   //去滑块
+			}
+			header
+			{
+				background: black;
+				position: fixed;
+				z-index: 999;
+				width: 100%;
+				height: 60px;
+				top: 0;
+				left: 0;
+				display: flex;
+			}
+			header .logo_box
+			{
+			
+				display: flex;
+			}
+			header .nav_box
+			{
+				width: 80%;
+			}
+			header .nav_box ul
+			{
+				display: flex;
+				list-style: none; //去点
+			}
+			header .nav_box ul li
+			{
+				width: 100px;
+				text-align: center;				
+			}
+            header .nav_box ul li a
+            {
+            	color: gainsboro;
+        		font-size: 15px;
+        		line-height: 60px;    
+        		font-family: 黑体;  
+        		text-decoration:none;  //去下划线  
+            }	
+			header .nav_box ul li a:hover
+			{
+				color: orange;
+			}
+			.container
+			{
+				transform: translate(0,0); 
+				transition: all 1s;
+			}
+			video
+			{
+				display: block;  //块
+			}
+			.video_fisrt
+			{
+				margin-top: 60px;
+				margin: 0;
+				padding: 0;
+			}
+			.video_second
+			{
+				margin: 0;
+				padding: 0;
+			}
+			.sprite
+			{
+			    background: url(sprite.png);
+			}
+			header .logo_box
+			{
+				background: url(logo.png);			
+				transform: scale(0.9,0.9);
+				height: 60px;
+				width:129px ;
+				background-position:0px 0px ;
+			}
+			header .button_box
+			{
+				background: url(sprite.png);
+				position: absolute;				
+				height: 40px;
+				width:142px ;
+				top:10px;
+				right:20px ;
+				background-position:548px 409px ;
+			}
+			.left_nav
+			{
+				background: url(bg_nav.png);
+				transform: scale(0.65,0.65);
+				position: absolute;
+				left: 0;
+				top: -60px;
+				width: 42px;
+				height: 936px;
+				z-index: 5;
+			}
+			.nav_content
+			{
+				color: white;
+			}
+			.nav_content li
+			{
+				position: absolute;
+				left: 33px;
+				width: 120px;
+				font-size: 15px;
+				list-style: none;
+			}
+			.nav_content li:nth-child(1)
+			{
+				top:54px
+			}
+			.nav_content li:nth-child(2)
+			{
+				top:255px
+			}
+			.nav_content li:nth-child(3)
+			{
+				top:460px
+			}
+			.nav_content li:nth-child(4)
+			{
+				top:662px
+			}
+			.nav_content li a:hover
+			{
+				color: orange;
+			}
+			
+			.video_fisrt, .video_second, .video_third, .video_fourth
+			{
+			    position: relative;
+			}
+		    .video_fisrt .first_bg
+		    {
+		        position: absolute;
+		        transform: scale(1.8,1.8);
+		        height: 142px;
+		        width: 269px;
+		        bottom: 50%;
+		        left: 40%;
+		        background-position: 561px 550px;
+		        
+		    }
+		    .video_second .second_bg
+		    {
+		    	position: absolute;
+		    	transform: scale(0.8,0.8);
+		    	height: 210px;
+		    	width: 558px;
+		    	bottom: 50%;
+		    	left: 30%;
+		    	background-position: 1111px 767px;
+		    }
+		    .video_third .third_bg
+		    {
+		    	position: absolute;
+		    	transform: scale(0.7,0.7);
+		    	height: 223px;
+		    	width: 558px;
+		    	bottom: 47%;
+		    	left: 30%;
+		    	background-position: 550px 767px;
+		    }
+		    .video_fourth .fourth_1_bg
+		    {
+		    	position: absolute;
+		    	transform: scale(0.7,0.7);
+		    	height: 87px;
+		    	width: 400px;
+		    	bottom: 55%;
+		    	left: 30%;
+		    	background-position: 1364px 471px;
+		    }
+		    .video_fourth .fourth_2_bg
+		    {
+		    	position: absolute;
+		    	transform: scale(0.7,0.7);
+		    	height: 87px;
+		    	width: 400px;
+		    	bottom: 43%;
+		    	left: 40%;
+		    	background-position: 965px 471px;
+		    }
+		    
+		    .foot
+		    {
+		    	z-index: 999;
+		    	transform: scale(0.8,0.8);
+		    	position: fixed;
+		    	height: 79px;
+		    	width: 28px;
+		    	left: 48%;
+		    	bottom: 10px;
+		    	background-position: -83px 0px;
+		    }
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo_box" onclick="window.location.href=''"></div>
+			<div class="nav_box">
+				 <ul>
+				 	<li><a href=""><b>官网首页</b></a></li>
+				 	<li><a href=""><b>绑定查询</b></a></li>
+				 	<li><a href=""><b>国服预约</b></a></li>
+				 	<li><a href=""><b>老兵绑定</b></a></li>
+				 	<li><a href=""><b>游戏特色</b></a></li>
+				 	<li><a href=""><b>社区app</b></a></li>
+				 	<li><a href=""><b>网吧认证</b></a></li>
+				 	
+		        </ul>
+			</div>
+			<div class="button_box" onclick="window.location.href=''"></div>
+		</header>
+		<div class="left_nav">
+			<ul class="nav_content">
+				<li><a onclick="gochange(1)">丰富玩法</a></li>
+				<li><a onclick="gochange(2)">丰富防具</a></li>
+				<li><a onclick="gochange(3)">丰富武器及配件</a></li>
+				<li><a onclick="gochange(4)">丰富载具</a></li>
+			</ul>
+		</div>
+		
+        <div class="container">
+        	<div class="video_fisrt">
+        		<video  autoplay="autoplay" loop="loop" style="width: 100%;" src="juedi1.mp4"></video>
+        		<p class="first_bg sprite" ></p>
+		    </div>
+		    <div class="video_second" >
+		    	<video loop="loop" style="width: 100%;" src="juedi2.mp4"></video>
+		    	<p class="second_bg sprite"></p>
+		    </div>
+		    <div class="video_third">
+		    	<video loop="loop" style="width: 100%;" src="juedi3.mp4"></video>
+		    	<p class="third_bg sprite"></p>
+		    </div>
+		    <div class="video_fourth">
+		    	<video loop="loop" style="width: 100%;" src="juedi4.mp4"></video>
+		    	<p class="fourth_1_bg sprite"></p>
+		    	<p class="fourth_2_bg sprite"></p>
+		    </div>
+        </div>
+			
+		<script type="text/javascript">
+			var index=0;
+			video_boxs=document.querySelectorAll('.container>div');  //获取div
+			var change = false;
+			a_boxs = document.querySelectorAll('.nav_content>li');
+			function changeBox(temp,num=0)
+			{   video_boxs[index].querySelector('video').pause()
+			    a_boxs[index].querySelector('a').style.color='white'
+			    if(num!=0)
+			    {
+			    	index = --num
+			    }
+			    else if(temp == 'up')
+				{
+				    index = --index < 0 ? 0 :index;
+				}
+				else if(temp=='down')
+				{
+					index = ++index == video_boxs.length ? --index :index;
+				}
+				
+				var x=-720*index;
+				document.querySelector('.container').style.transform='translate(0,'+x+'px)'
+				video_boxs[index].querySelector('video').play()
+				change = false;
+				a_boxs[index].querySelector('a').style.color='orange'
+				
+			}
+			function gochange(index)
+			{
+				changeBox('',index)
+			}
+			function updown(event)
+			{	
+				
+				var temp=''
+				if(event.key=='ArrowDown')
+				{
+					temp='down'
+				}
+				else if(event.key=='ArrowUp')
+				{
+					temp='up'
+				}
+				changeBox(temp)
+
+			}
+			
+			
+			function scroll(event)
+			{	
+				
+				var temp=''
+				var e = event || window.event  
+				var x = e.detail == 0 ? -e.wheelDelta : e.detail 
+				console.log(e.wheelDelta)
+				console.log(e.detail)
+				if(x>0)
+				{
+					temp='down';
+				}
+				else if(x<0)
+				{
+					temp='up';
+				}
+				
+				if(!change)
+				{
+					setTimeout(function(){
+			     	changeBox(temp)},200)
+					change = true;
+				}
+			   
+
+			}
+			window.addEventListener('keydown',updown,true);
+			if(document.addEventListener) 
+			{
+				document.addEventListener('DOMMouseScroll',scroll,false);
+			} //火狐
+			window.onmousewheel=document.onmousewheel=scroll; //360
+			
+		
+		</script>
+	</body>
+	<div>
+		<p class="foot sprite"></p>
+	</div>
+</html>
